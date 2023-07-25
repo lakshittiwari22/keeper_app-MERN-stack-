@@ -11,20 +11,20 @@ function App() {
   useEffect(() => {
     //fetch data from backend
     axios
-      .get("http://localhost:3001/api/getAll")
+      .get("keeper-app-backend-4w9y.onrender.com/api/getAll")
       .then((res) => setNotes(res.data));
   }, []);// Empty dependency array to run the effect only on mount
 
   function addNote(newNote) {
     if (newNote.title || newNote.content) {
       axios
-        .post("http://localhost:3001/api/addNew", newNote)
+        .post("keeper-app-backend-4w9y.onrender.com/api/addNew", newNote)
         .then((res) => setNotes(res.data));
     }
   }
 
   function deleteNote(id) {
-    axios.post("http://localhost:3001/api/delete",{ id }) //sending id to backend 
+    axios.post("keeper-app-backend-4w9y.onrender.com/api/delete",{ id }) //sending id to backend 
     .then(res => setNotes(res.data))
   }
 
