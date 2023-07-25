@@ -101,3 +101,15 @@ form.create-note button {
   cursor: pointer;
   outline: none;
 }
+
+@media only screen and (max-width: 768px) {
+  form.create-note {
+    position: relative;
+    width: 80%;
+    margin: 30px auto 20px auto;
+    background: #fff;
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow: 0 1px 5px rgb(138, 137, 137);
+  }
+}
